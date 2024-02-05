@@ -1,9 +1,3 @@
----
-runme:
-  id: 01HNWHN1A86NCGZ9B64JE5ZSXS
-  version: v2.2
----
-
 # Next.js Games List and Details Project
 
 This project demonstrates a Next.js application that lists games and provides detailed views of each game using Gamespot api. It showcases the benefits of combining client-side rendering for improved user experience with server-side rendering for enhanced search engine optimization (SEO).
