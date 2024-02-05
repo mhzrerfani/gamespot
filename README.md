@@ -5,18 +5,19 @@ Table of Contents
 
 ## Features
 
-    Main Page: Displays a list of games rendered using Next.js API routes.
-    Game Details Page: Server-side rendered (SSR) page that provides detailed information about a selected game.
-    Client-Side Scrolling: Scroll pagination for efficient browsing and searching through the game list.
-    SEO Optimization: Server-side rendering for individual game details pages for better SEO.
+Main Page: Displays a list of games rendered using Next.js API routes.
+Game Details Page: Server-side rendered (SSR) page that provides detailed information about a selected game.
+Client-Side Scrolling: Scroll pagination for efficient browsing and searching through the game list.
+SEO Optimization: Server-side rendering for individual game details pages for better SEO.
 
 ## Architecture
 
 The project consists of two main pages:
 
-    Main Page (/): This page is responsible for listing all available games. It uses client-side rendering with scroll pagination to load games as the user scrolls through the list. This approach enhances the user experience by allowing users to search and scroll through the list without reloading the entire page.
+Main Page (/): This page is responsible for listing all available games. It uses client-side rendering with scroll pagination to load games as the user scrolls through the list. This approach enhances the user experience by allowing users to search and scroll through the list without reloading the entire page.
 
-    Game Details Page (/games/[id]): When a user clicks on a game from the list, they are taken to this SSR page. The game details are fetched server-side, ensuring that the page is fully rendered and ready for search engines to crawl. This is beneficial for SEO as search engines can index the content more effectively.
+Game Details Page (/games/[id]): When a user clicks on a game from the list, they are taken to this SSR page. The game details are fetched server-side, ensuring that the page is fully rendered and ready for search engines to crawl. This is beneficial for SEO as search engines can index the content more effectively.
+
 
 ```bash {"id":"01HNWHN1A7QCGECPZWRYTJMEG6"}
 npm run dev
