@@ -1,10 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+---
+runme:
+  id: 01HNWHN1A86NCGZ9B64JE5ZSXS
+  version: v2.2
+---
 
-## Getting Started
+# Next.js Games List and Details Project
 
-First, run the development server:
+This project demonstrates a Next.js application that lists games and provides detailed views of each game using Gamespot api. It showcases the benefits of combining client-side rendering for improved user experience with server-side rendering for enhanced search engine optimization (SEO).
+Table of Contents
 
-```bash
+## Features
+
+    Main Page: Displays a list of games rendered using Next.js API routes.
+    Game Details Page: Server-side rendered (SSR) page that provides detailed information about a selected game.
+    Client-Side Scrolling: Scroll pagination for efficient browsing and searching through the game list.
+    SEO Optimization: Server-side rendering for individual game details pages for better SEO.
+
+## Architecture
+
+The project consists of two main pages:
+
+    Main Page (/): This page is responsible for listing all available games. It uses client-side rendering with scroll pagination to load games as the user scrolls through the list. This approach enhances the user experience by allowing users to search and scroll through the list without reloading the entire page.
+
+    Game Details Page (/games/[id]): When a user clicks on a game from the list, they are taken to this SSR page. The game details are fetched server-side, ensuring that the page is fully rendered and ready for search engines to crawl. This is beneficial for SEO as search engines can index the content more effectively.
+
+```bash {"id":"01HNWHN1A7QCGECPZWRYTJMEG6"}
 npm run dev
 # or
 yarn dev
@@ -15,10 +35,6 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 
