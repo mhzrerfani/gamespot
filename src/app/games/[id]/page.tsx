@@ -13,6 +13,7 @@ export async function getGame(id: string): Promise<Game> {
     headers: {
       "Content-Type": "application/json",
     },
+    cache: "force-cache",
   });
 
   if (!res.ok) {
@@ -24,8 +25,12 @@ export async function getGame(id: string): Promise<Game> {
   return data.results[0];
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const game = await getGame(params.id);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const game = await getGame((await params).id);
   const { deck, name } = game;
 
   return {
@@ -34,8 +39,12 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
-export default async function Page({ params }: { params: { id: string } }) {
-  const game = await getGame(params.id);
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const game = await getGame((await params).id);
   const { image, description, site_detail_url, name } = game;
   const genres = game.genres.map((genre, i) => {
     return (

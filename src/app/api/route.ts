@@ -13,6 +13,7 @@ export async function GET(request: NextRequest) {
     headers: {
       "Content-Type": "application/json",
     },
+    cache: "force-cache",
   });
 
   if (!res.ok) {
